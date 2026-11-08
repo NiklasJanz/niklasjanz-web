@@ -1,0 +1,159 @@
+/* Bento Grün, wie die App (Werte aus src/theme.ts in VeganApp) */
+@font-face {
+  font-family: 'Fraunces';
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/Fraunces_700Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/DMSans_400Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/DMSans_700Bold.ttf') format('truetype');
+}
+
+:root {
+  --background: #edf1e4;
+  --primary: #2f5d3a;
+  --text: #1f3326;
+  --text-muted: #566659;
+  --white: #ffffff;
+  --tile-mist: #dcebcf;
+  --radius-card: 26px;
+  --radius-sm: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  background: var(--background);
+  color: var(--text);
+  font-family: 'DM Sans', -apple-system, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+}
+
+.top,
+.tile,
+footer {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.top {
+  padding: 8px 0 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 22px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.brand img {
+  border-radius: 9px;
+}
+
+/* Kachel: ruhige Fläche, keine Rahmen, keine harten Schatten */
+.tile {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  padding: 32px 24px;
+}
+
+h1,
+h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 34px;
+  margin: 0 0 8px;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 32px 0 8px;
+}
+
+p {
+  margin: 0 0 12px;
+  overflow-wrap: break-word;
+}
+
+.updated {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.links a {
+  display: block;
+  padding: 14px 18px;
+  background: var(--tile-mist);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+footer {
+  padding: 24px 0 32px;
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  justify-content: center;
+}
+
+footer a {
+  font-size: 15px;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+footer a:hover,
+.links a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 32px 24px;
+  }
+  .tile {
+    padding: 48px;
+  }
+}
